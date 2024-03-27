@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* 배경 이미지 경로 설정 */
+  background-size: cover; /* 이미지를 컨테이너에 맞게 자동으로 조절 */
+  background-position: center; /* 이미지를 가운데 정렬 */
+}
+
+.title-dark,
+.title-light,
+.subtitle-dark,
+.subtitle-light {
+  width: 731px;
+  position: absolute;
+  font-family: Poppins;
+  word-wrap: break-word;
+}
+
+/* 설명 그림자*/
+.title-dark {
+  height: 171px;
+  left: 90px;
+  top: 346px;
+  color: rgba(0, 0, 0, 0.5); /* 투명한 검정색 */
+  -webkit-text-stroke-width: 1; /* 텍스트 테두리 두께 */
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.5); /* 텍스트 테두리 색상 */
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  filter: blur(2px); /* 텍스트에 2픽셀의 블러 효과 적용 */
+}
+
+/* 설명*/
+.title-light {
+  height: 171px;
+  left: 90px;
+  top: 346px;
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+/*제목 그림자*/
+.subtitle-dark {
+  height: 78px;
+  left: 90px;
+  top: 268px;
+  color: rgba(0, 0, 0, 0.5); /* 투명한 검정색 */
+  -webkit-text-stroke-width: 1; /* 텍스트 테두리 두께 */
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.5); /* 텍스트 테두리 색상 */
+  font-family: Poppins;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  filter: blur(2px); /* 텍스트에 2픽셀의 블러 효과 적용 */
+}
+
+/*제목*/
+.subtitle-light {
+  height: 78px;
+  left: 90px;
+  top: 268px;
+  color: #12b48d;
+  font-size: 50px;
+  font-weight: 600;
+}
