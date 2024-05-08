@@ -1,0 +1,72 @@
+/* 로그인 페이지 컨테이너 */
+.login-container {
+  width: 540px; /* 컨테이너의 너비 */
+  height: 330px; /* 컨테이너의 높이 */
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 20px; /* 안쪽 여백 */
+  background-color: #f9f9f9; /* 배경색 */
+  border-radius: 8px; /* 테두리 모서리 반경 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  display: flex; /* Flexbox 레이아웃 사용 */
+  flex-direction: column; /* 세로 방향으로 아이템 배치 */
+  justify-content: center; /* 수직 가운데 정렬 */
+  align-items: center; /* 수평 가운데 정렬 */
+
+  margin-top: 200px;
+}
+
+/* 입력 필드 */
+.login-container input {
+  width: 320px;
+  padding: 10px; /* 안쪽 여백 */
+  margin-top: 4px;
+  margin-bottom: 10px; /* 아래 여백 */
+  border: 1px solid #ccc; /* 테두리 */
+  border-radius: 4px; /* 테두리 모서리 반경 */
+  box-sizing: border-box; /* 박스 모델의 content-box 사용 */
+}
+
+.login-container button:hover {
+  background-color: #0e8e69; /* 호버 시 배경색 변경 */
+}
+
+/* 버튼 */
+.login-container button {
+  width: 320px;
+  padding: 10px; /* 안쪽 여백 */
+  margin-bottom: 20px; /* 아래 여백 */
+  background-color: #12b48d; /* 배경색 */
+  color: #fff; /* 글자색 */
+  border: none; /* 테두리 없음 */
+  border-radius: 4px; /* 테두리 모서리 반경 */
+  cursor: pointer; /* 마우스 커서 타입 */
+}
+
+/* 하단 링크 */
+.login-container p {
+  margin-top: 10px; /* 상단 여백 */
+  text-align: center; /* 가운데 정렬 */
+}
+
+/* 링크 스타일 */
+.login-container p a {
+  color: #12b48d; /* 링크 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+/* 링크 호버 상태 */
+.login-container p a:hover {
+  text-decoration: underline; /* 호버 시 밑줄 표시 */
+}
+
+/* 회원가입 링크 스타일 */
+.login-container p a {
+  color: #12b48d; /* 링크 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-size: 14px; /* 글자 크기 */
+}
+
+/* 회원가입 링크 호버 상태 */
+.login-container p a:hover {
+  text-decoration: none; /* 호버 시 밑줄 표시 */
+}

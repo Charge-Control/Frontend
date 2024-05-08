@@ -1,0 +1,90 @@
+/* join-page.css */
+
+/* 회원가입 컨테이너 */
+.join-container {
+  width: 540px; /* 컨테이너의 너비 */
+  height: 490px; /* 컨테이너의 높이 */
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 20px; /* 안쪽 여백 */
+  background-color: #f9f9f9; /* 배경색 */
+  border-radius: 8px; /* 테두리 모서리 반경 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  display: flex; /* Flexbox 레이아웃 사용 */
+  flex-direction: column; /* 세로 방향으로 아이템 배치 */
+  justify-content: center; /* 수직 가운데 정렬 */
+  align-items: center; /* 수평 가운데 정렬 */
+
+  margin-top: 200px; /* 상단 여백 */
+}
+
+/* 입력 필드 */
+.join-container input {
+  width: 100%; /* 너비 100% */
+  max-width: 396px; /* 최대 너비 제한 */
+  padding: 10px; /* 안쪽 여백 */
+  margin-top: 4px; /* 아래 여백 */
+  margin-bottom: 10px; /* 아래 여백 */
+  border: 1px solid #ccc; /* 테두리 */
+  border-radius: 4px; /* 테두리 모서리 반경 */
+  box-sizing: border-box; /* 박스 모델의 content-box 사용 */
+}
+
+/* 회원가입 버튼 */
+.join-container button {
+  width: 100%;
+  max-width: 396px; /* 최대 너비 제한 */
+  padding: 10px; /* 안쪽 여백 */
+  margin-bottom: 10px; /* 아래 여백 */
+  background-color: #12b48d; /* 배경색 */
+  color: #fff; /* 글자색 */
+  border: none; /* 테두리 없음 */
+  border-radius: 4px; /* 테두리 모서리 반경 */
+  cursor: pointer; /* 마우스 커서 타입 */
+}
+
+/* 하단 링크 */
+.join-container p {
+  margin-top: 10px; /* 상단 여백 */
+  text-align: center; /* 가운데 정렬 */
+}
+
+/* 링크 스타일 */
+.join-container p a {
+  color: #12b48d; /* 링크 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+/* 링크 호버 상태 */
+.join-container p a:hover {
+  text-decoration: underline; /* 호버 시 밑줄 표시 */
+}
+
+/* 회원가입 링크 스타일 */
+.join-container p a {
+  color: #12b48d; /* 링크 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-size: 14px; /* 글자 크기 */
+}
+
+/* 회원가입 링크 호버 상태 */
+.join-container p a:hover {
+  text-decoration: none; /* 호버 시 밑줄 표시 */
+}
+
+/* 비밀번호 입력 부분 */
+.password-inputs {
+  width: 100%; /* 너비 100% */
+  max-width: 396px; /* 최대 너비 제한 */
+  display: flex; /* Flexbox 레이아웃 사용 */
+  flex-direction: column; /* 세로 방향으로 아이템 배치 */
+}
+
+/* 비밀번호 입력 필드 */
+.password-inputs input {
+  width: 100%; /* 너비 100% */
+  padding: 10px; /* 안쪽 여백 */
+  margin-bottom: 10px; /* 아래 여백 */
+  border: 1px solid #ccc; /* 테두리 */
+  border-radius: 4px; /* 테두리 모서리 반경 */
+  box-sizing: border-box; /* 박스 모델의 content-box 사용 */
+}

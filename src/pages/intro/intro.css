@@ -1,0 +1,47 @@
+.container {
+  position: relative;
+  margin: 0;
+  z-index: -1;
+}
+
+.introImage {
+  height: 100vh;
+  background: url(../../images/blur_image3.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.intro-content {
+  position: absolute;
+  width: 1280px;
+  height: 832px;
+  left: 0px;
+  top: 67px;
+}
+
+.introTitle {
+  position: absolute;
+  width: 731px;
+  height: 78px;
+  left: 90px;
+  top: 248px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 75px;
+  color: #000000;
+}
+
+.introContents {
+  position: absolute;
+  width: 731px;
+  height: 306px;
+  left: 90px;
+  top: 326px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+}

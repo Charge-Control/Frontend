@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import Navigation from "./Navigation";
-import Routing from "./Routing";
+import Routing from "./components/Routing";
+import Navigation from "./components/nav/nav";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

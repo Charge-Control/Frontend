@@ -1,0 +1,108 @@
+/* petitionList.css */
+
+.petitionList {
+  margin-top: 120px;
+  width: 800px; /*컨테이너 넓이*/
+}
+
+.petitionList div {
+  margin-top: 20px; /* 위쪽 여백 추가 */
+  text-align: center; /* 내용 가운데 정렬 */
+}
+
+.petitionList .tableContainer {
+  margin-left: 400px;
+}
+
+/*--------------이 부분 지금 없음--------------*/
+/* 검색 컨테이너 */
+.searchContainer {
+  width: 300px;
+  height: 40px;
+  margin-left: 100px;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+/* 검색 드롭다운 */
+.searchDropdown {
+  height: 100%;
+  margin-right: 10px;
+}
+
+/* 검색 입력창 */
+.searchContainer input[type="text"] {
+  width: 210px;
+  height: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+/* 검색 버튼 */
+.searchContainer button {
+  height: 100%;
+  padding: 10px 16px;
+  background-color: #cccccc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.petitionList table tbody tr td:nth-child(2) a {
+  text-decoration: none; /* 글 제목의 밑줄 제거 */
+  color: inherit; /* 링크의 색상을 상위 요소의 색상으로 상속 */
+}
+
+.petitionList table {
+  margin-left: 110px;
+  width: 800px; /* 테이블 전체 폭 사용 */
+  border-collapse: collapse; /* 테이블 셀 경계 표시 제거 */
+}
+
+.petitionList th,
+.petitionList td {
+  padding: 8px; /* 셀 안 여백 */
+  border: 1px solid #f2f2f2; /* 테이블 셀 테두리 */
+  border-right: none; /* 우측 테두리 제거 */
+  border-left: none; /* 좌측 테두리 제거 */
+}
+
+.petitionList th {
+  background-color: #f2f2f2; /* 테이블 헤더 배경색 */
+  text-align: center; /* 헤더 텍스트 중앙 정렬 */
+}
+
+/* 작성 시간, 답변 여부 테이블 셀 스타일 */
+.petitionList td:nth-child(4),
+.petitionList td:nth-child(5) {
+  text-align: center; /* 가운데 정렬 */
+}
+
+/* Pagination 스타일 */
+.petitionList .paginationButtonContainer {
+  text-align: center; /* 페이지네이션 버튼을 가운데 정렬합니다. */
+  width: 400px;
+
+  margin-left: 700px;
+}
+
+.petitionList button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #fff;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.001px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.petitionList .paginationContainer button.active {
+  font-weight: bold;
+}

@@ -1,0 +1,57 @@
+/* faq.css */
+
+/* 컨테이너 */
+.faq-container {
+  margin-top: 160px;
+  margin-left: 550px;
+}
+
+/* 질문과 답변 세트에 대한 스타일 */
+.faq-container div {
+  width: 832px;
+  padding: 10px; /* 내부 여백 설정 */
+  margin-bottom: 20px; /* 질문과 답변 세트 사이의 간격 설정 */
+  /*background-color: #eeeeee;*/
+}
+
+/* 질문에 대한 스타일 */
+.faq-container h3 {
+  font-size: 18px;
+  padding: 8px 12px; /* 질문 내부 여백 설정 */
+  margin: 0; /* 질문의 위아래 마진 제거 */
+  border-top-left-radius: 5px; /* 질문의 상단 좌측 모서리를 둥글게 만듭니다. */
+  border-top-right-radius: 5px; /* 질문의 상단 우측 모서리를 둥글게 만듭니다. */
+  border-bottom: 1px solid #6b6b6b; /* 테두리에 가로선 추가 */
+}
+
+/* 답변에 대한 스타일 */
+.faq-container p {
+  font-size: 16px;
+  height: 100%;
+  margin: 20px; /* 답변의 위아래 마진 제거 */
+}
+
+/* 질문 호버 효과 */
+.faq-container .faq-item h3:hover {
+  cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+}
+
+/* 페이지네이션에 대한 스타일 */
+.pagination {
+  text-align: center; /* 페이지네이션 버튼을 가운데 정렬합니다. */
+  margin-top: 20px; /* 페이지네이션과 검색 사이의 간격 설정 */
+}
+
+.pagination button {
+  padding: 8px 16px;
+  background-color: #fff;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 2px; /* 버튼 간격 조정 */
+}
+
+.pagination button.active {
+  font-weight: bold;
+}
