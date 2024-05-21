@@ -1,0 +1,169 @@
+/* js 파일을 기준으로 검색 부분을 왼쪽에 배치하는 디자인을 설정합니다. */
+.map-container {
+  display: flex;
+  flex-direction: row; /* 가로 방향으로 요소들을 배열 */
+  align-items: flex-start; /* 요소들을 위쪽으로 정렬 */
+  justify-content: flex-start; /* 요소들을 왼쪽으로 정렬 */
+  margin-top: 120px;
+}
+
+/*-------------------------------------------------------------------------  지도  */
+/* 지도의 크기와 테두리 디자인을 설정합니다. */
+#map {
+  margin-left: 20px;
+  width: 1200px;
+  height: 700px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+/* 나머지 요소들의 간격을 조정합니다. */
+.map-container div {
+  margin-bottom: 10px;
+}
+
+/*-------------------------------------------------------------------------  검색창  */
+
+/* 검색 폼의 디자인을 설정합니다. */
+.mapsearch-form {
+  width: 340px;
+  height: 400px;
+
+  margin-top: 50px;
+  margin-left: 130px;
+  display: flex;
+  flex-direction: column; /* 가로 방향으로 요소들을 배열 */
+  align-items: center; /* 요소들을 수직 가운데로 정렬 */
+
+  border: 1px solid #ccc; /* 테두리 설정 */
+  padding: 10px; /* 내부 여백 설정 */
+  border-radius: 20px; /* 테두리를 둥글게 만듭니다. */
+
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+}
+
+.search-top {
+  padding: 10px;
+  margin-top: 20px;
+  width: 240px;
+  height: 20px;
+  border: 1px solid #ccc; /* 검색 상단에 얇은 선 테두리 설정 */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+/* 검색 입력창의 디자인을 설정합니다. */
+.search-top input[type="text"] {
+  width: 200px; /* 입력창의 너비 */
+  margin-right: 10px;
+  border: none; /* 입력창 테두리 투명으로 설정 */
+  outline: none; /* 포커스 효과 제거 */
+}
+
+.search-button .react-icons {
+  color: rgb(133, 133, 133); /* 원하는 색상으로 변경 */
+}
+
+.search-top button {
+  margin-top: 3px;
+  margin-left: 18px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/*--------------------------------------------------------------------------search-mid*/
+/* 검색 결과 */
+.map-container li {
+  margin-top: 12px;
+  list-style-type: none; /* 리스트 스타일 제거 */
+  margin-bottom: 12px;
+}
+
+.map-container li span:first-child {
+  margin-left: 0; /* 주유소 이름의 왼쪽 마진을 0으로 설정 */
+  font-size: 17px; /* 주유소 이름의 글꼴 크기 설정 */
+}
+
+.map-container li span {
+  margin-left: 14px; /* 주유소 이름, 거리, 가격 사이의 간격 설정 */
+  font-size: 13px; /* 거리와 가격의 글꼴 크기 설정 */
+}
+
+.map-container .search-mid {
+  margin-top: -5px;
+  text-align: center; /* 검색 결과를 가운데로 정렬합니다. */
+}
+
+.search-mid ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* 구분선 추가
+.search-mid ul li {
+  border-bottom: 1px solid #ccc;
+}*/
+
+.search-mid ul li:last-child {
+  border-bottom: none; /* 마지막 요소의 구분선 제거 */
+}
+
+/*-------------------------------------------------search-end*/
+
+.map-container .search-end {
+  position: fixed; /* 위치를 고정합니다. */
+  margin-top: 350px; /* 위쪽으로 230px 위치에 고정합니다. */
+}
+
+/* search-end 버튼 두 개*/
+.map-container .search-end button {
+  width: 100px;
+  height: 50px;
+  margin-left: 15px;
+  margin-right: 20px; /* 버튼 간격 조정 */
+  background-color: #e8e8e8; /* 버튼 색상 */
+}
+
+/* 검색 버튼의 디자인을 설정합니다. */
+.mapsearch-form button {
+  padding: 10px 20px;
+  color: black;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* 색상 전환에 애니메이션 추가 */
+}
+
+/*-------------------------------------------------------------------------  검색창  */
+.search-mid ul {
+  list-style-type: none;
+}
+
+.stationInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stationName,
+.stationData {
+  flex: 1;
+  /* 추가적인 스타일링을 원하는 경우 여기에 작성합니다 */
+}
+
+.stationName {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.stationData {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.search-mid {
+  height: 270px; /* 스크롤이 필요한 높이로 설정하십시오 */
+  overflow-y: auto; /* 수직 스크롤바 자동 표시 */
+}

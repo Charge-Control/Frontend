@@ -1,43 +1,157 @@
-/* petitionDetail.css */
-
 .petitionDetail {
-  margin-left: 500px;
-  margin-top: 150px;
-  width: 832px;
-  border: 1px solid #ccc; /* 테두리 추가 */
-  padding: 20px; /* 내부 여백 추가 */
+  margin-top: 200px;
 }
 
-/* 제목 입력란 스타일 */
-.petitionDetail .title {
+.petition-contents1 {
+  width: 800px; /* 컨테이너 최대 너비 */
+  min-height: 400px;
+  max-height: 600px;
+
+  margin: 20px auto; /* 가운데 정렬 */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column; /* 수직으로 배치 */
+}
+
+.title1 {
+  font-size: 24px; /* 타이틀 폰트 크기 */
+  text-align: center; /* 가운데 정렬 */
+}
+/* -----------------------------------------------------------------사용자 정보 */
+.titiles1 {
   font-weight: bold;
-  margin-bottom: 10px;
+
+  margin-top: 10px;
+  margin-bottom: -5px;
+
+  padding: 10px;
+  display: flex;
+  justify-content: space-between; /* first와 second를 수평으로 배치합니다 */
 }
 
-/* 내용 스타일 */
-.petitionDetail .id-item,
-.petitionDetail .title-item,
-.petitionDetail .username-item,
-.petitionDetail .carnum-item,
-.petitionDetail .text-item {
-  margin-bottom: 10px;
+.first1,
+.second1 {
+  margin-top: -20px;
+  flex: 1;
+  padding: 20px; /* 각 요소의 내부 여백을 조절합니다 */
 }
 
-/* 가로 세로 구분선 추가 */
-.petitionDetail .id-item,
-.petitionDetail .title-item,
-.petitionDetail .username-item,
-.petitionDetail .carnum-item {
-  height: 32px;
-  border-bottom: 1px solid #ccc; /* 가로 구분선 추가 */
-  padding-bottom: 10px; /* 아래 여백 추가 */
+.second1 {
+  margin-top: 54px;
+
+  margin-left: 100px;
+  display: flex;
+  flex-direction: row; /* 수평 정렬 */
 }
 
-.petitionDetail .text-item {
-  height: 410px;
+.second1 > * {
+  margin-right: 5px;
+  margin-left: auto;
 }
 
-/* 마지막 아이템의 구분선 제거 */
-.petitionDetail .text-item:last-child {
-  border-bottom: none;
+.petition-contents1 p {
+  margin-bottom: 7px; /* 문단 간격 */
+}
+/* -----------------------------------------------------------------글 내용 */
+
+.text-item1 {
+  margin-top: 10px; /* 위쪽 여백 */
+}
+
+.answer-form1 textarea {
+  width: 100%; /* 너비 100% */
+  height: 100px; /* 높이 100px */
+  margin-bottom: 10px; /* 아래 여백 */
+  padding: 5px; /* 안쪽 여백 */
+}
+
+/*----------------------------------------------------글들*/
+
+/* 이의신청 테두리 */
+.petition-contents1 .text-item1 {
+  min-height: 50px; /* 최소 높이를 20px로 설정합니다 */
+  max-height: 200px; /* 최대 높이를 200px로 설정합니다 */
+  overflow: auto; /* 텍스트가 최대 높이를 넘어갈 경우 스크롤바를 표시합니다 */
+
+  margin-left: 20px;
+  width: 720px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1); /* 테두리 */
+  background-color: #ffffff;
+  /*border-radius: 5px; /* 테두리 둥글게 */
+  padding: 20px; /* 안쪽 여백 */
+
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* 상단 구분선 */
+}
+
+/* 답변 테두리 */
+.petition-contents1 .answer-item1 {
+  min-height: 50px; /* 최소 높이를 20px로 설정합니다 */
+  max-height: 200px; /* 최대 높이를 200px로 설정합니다 */
+  overflow: auto; /* 텍스트가 최대 높이를 넘어갈 경우 스크롤바를 표시합니다 */
+
+  margin-left: 20px;
+  width: 720px;
+  height: 200px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1); /* 테두리 */
+  background-color: #ffffff;
+  border-radius: 5px; /* 테두리 둥글게 */
+  padding: 20px; /* 안쪽 여백 */
+  margin-bottom: 20px;
+}
+
+/*----------------------------------------------------버튼*/
+
+.answer-item1 {
+  margin-top: 10px;
+  min-height: 50px;
+  max-height: 200px;
+  overflow: auto;
+  margin-left: 20px;
+  width: 720px;
+  height: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.button-container {
+  margin-top: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: 30px;
+  display: flex;
+}
+
+.edit-button button,
+.delete-button button {
+  margin-left: 20px;
+  padding: 8px 16px; /* 안쪽 여백 */
+  border: none; /* 테두리 없음 */
+  border-radius: 8px; /* 테두리 둥글게 */
+  background-color: #1f1f1f; /* 배경색 */
+  color: #fff; /* 글자색 */
+  font-size: 14px; /* 폰트 크기 */
+  cursor: pointer; /* 커서 모양 */
+}
+
+.delete-button button {
+  background-color: #1f1f1f; /* 삭제 버튼 배경색 */
+}
+
+.edit-button button:hover,
+.delete-button button:hover {
+  background-color: #5f5f5f; /* 호버 시 배경색 */
+}
+
+.answer-item1 .answer-title1 {
+  color: #12b48d;
+  font-weight: bold;
+}
+.answer-item1 .answer-title2 {
+  color: black;
+  font-weight: bold;
 }

@@ -1,27 +1,47 @@
 /* 전체 위반 목록 컨테이너 */
 .violationList {
-  margin-top: 100px;
-
+  margin-top: 120px;
+  margin-left: calc(
+    (100% - 1800px) / 2
+  ); /* 웹페이지 너비의 절반에서 컨테이너의 절반 너비를 뺀 값으로 왼쪽 마진을 설정하여 중앙에 위치하도록 합니다. */
   width: 800px; /* 컨테이너의 너비를 설정 */
 }
 
-/* 검색 입력란 */
-.violationList input[type="text"] {
-  width: 210px;
-  padding: 8px;
-  margin-right: 10px;
-  margin-left: 300px;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-
-  margin-bottom: 60px;
+.violationList.nonAdmin {
+  margin-top: 160px; /* ADMIN이 아닐 때의 마진-그러니까 서치바가 없을 때를 고려함 */
 }
 
-/* 검색 버튼 */
-.violationList button {
-  padding: 10px 16px;
-  background-color: #cccccc;
-  color: #fff;
+/* 검색 폼의 디자인을 설정합니다. */
+.violation-search {
+  padding: 2px;
+
+  width: 240px;
+  height: 34px;
+  margin-top: 30px;
+  margin-left: 1100px; /*230px*/
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc; /* 얇은 테두리 추가 */
+  border-radius: 4px; /* 테두리 둥글게 설정 */
+  margin-bottom: -20px;
+}
+
+/* 검색 입력창의 디자인을 설정합니다. */
+.violation-search input[type="text"] {
+  margin-left: 5px;
+  width: 160px;
+  padding: 8px;
+  margin-right: 10px;
+  border: none; /* 입력창 테두리 제거 */
+  border-radius: 0; /* 입력창의 테두리 반경 제거 */
+}
+
+/* 검색 버튼의 디자인을 설정합니다. */
+.violation-search button {
+  margin-left: 16px;
+  padding: 8px;
+  background-color: transparent; /* 배경색 투명으로 설정 */
+  color: #000000;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -53,23 +73,23 @@
 /* 위반 목록 아이템 사이의 구분선 */
 .violationList li + li {
   border-top: 1px solid #cccccc; /* 회색 선을 추가하여 구분선을 만듭니다. */
-  margin-top: -20px; /*구분선 간격*/
 }
 
 /* 차량 번호 */
 .violationList .carNumber {
-  margin-left: 4px;
+  margin-top: 15px;
+  margin-left: 3px;
   width: 326px;
 
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 540;
   font-size: 24px;
   line-height: 45px;
 }
 
 /* 위반 날짜 */
-.violationList .violationdate {
+.violationList .violationDate {
   margin-left: 4px;
   width: 259px;
 
@@ -96,7 +116,7 @@
 .violationList .imageContainer {
   float: right; /* 오른쪽으로 정렬합니다. */
   margin-left: 20px; /* 이미지와 텍스트 사이의 간격을 조정합니다. */
-  margin-top: 10px; /* 이미지의 상단 여백을 설정합니다. */
+  margin-top: 5px; /* 이미지의 상단 여백을 설정합니다. */
 }
 
 /* 위반 이미지 */
@@ -105,7 +125,7 @@
   height: 150px;
   margin-top: 10px;
   float: right; /* 이미지를 오른쪽으로 부유시킵니다. */
-  margin-top: 10px;
+  margin-top: 0px;
   margin-left: 20px; /* 이미지와 텍스트 사이의 간격을 조정합니다. */
 }
 
@@ -113,9 +133,9 @@
 .violationList .detailButton {
   padding: 6px 12px;
   background-color: #cccccc;
-  color: #fff;
+  color: #000000;
   border: none;
-  border-radius: 4px;
+  border-radius: 3px;
   cursor: pointer;
   margin-top: 14px;
   margin-left: 4px;
@@ -123,14 +143,19 @@
 
 /* 페이지네이션 */
 .violationList .paginationButtonContainer {
-  text-align: center; /* 페이지네이션 버튼을 가운데 정렬합니다. */
-  width: 400px;
+  width: 100%;
 
-  margin-left: 700px;
+  display: flex;
+  justify-content: center; /* 가운데 정렬 */
+  margin-left: 525px;
+  /*background-color: #0e8e70; /* 활성화된 상태 배경색 */
 }
 
 /* 페이지네이션 버튼 */
 .violationList .paginationButton {
+  margin-top: 60px;
+  margin-bottom: 60px;
+
   display: inline-block;
   padding: 8px 16px;
   background-color: #fff;
@@ -138,10 +163,6 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-left: 0.001px;
-
-  margin-top: 100px;
-  margin-bottom: 50px;
 }
 
 /* 페이지네이션 버튼 활성화 상태 */

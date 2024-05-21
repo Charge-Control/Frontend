@@ -15,6 +15,13 @@
   margin-top: 200px;
 }
 
+/* 입력 필드와 라벨 */
+.login-container div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px; /* 입력 필드 간 간격 */
+}
+
 /* 입력 필드 */
 .login-container input {
   width: 320px;
@@ -52,11 +59,6 @@
 .login-container p a {
   color: #12b48d; /* 링크 색상 */
   text-decoration: none; /* 밑줄 제거 */
-}
-
-/* 링크 호버 상태 */
-.login-container p a:hover {
-  text-decoration: underline; /* 호버 시 밑줄 표시 */
 }
 
 /* 회원가입 링크 스타일 */

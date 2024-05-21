@@ -1,21 +1,31 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./main.css";
-import Navigation from "../../components/nav/nav";
 
 const MainPage = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem("accessToken");
+    const refreshToken = localStorage.getItem("refreshToken");
+
+    if (accessToken && refreshToken) {
+      axios.defaults.headers.common["Authorization"] = `Bearer ${accessToken}`;
+      setIsLoggedIn(true);
+    }
+  }, []);
+
   return (
     <div className="container">
-      <Navigation />
       <div className="mainImage"></div>
       <div className="content">
-        <div className="title title-dark">Charge Control</div>
-        <div className="title title-light">Charge Control</div>
-        <div className="subtitle subtitle-dark">
+        <div className="main-title-dark">Charge Control</div>
+        <div className="main-title-light">Charge Control</div>
+        <div className="main-subtitle-dark">
           전기차 충전소 관리를
           <br />더 효율적으로
         </div>
-        <div className="subtitle subtitle-light">
+        <div className="main-subtitle-light">
           전기차 충전소 관리를
           <br />더 효율적으로
         </div>
@@ -25,5 +35,3 @@ const MainPage = () => {
 };
 
 export default MainPage;
-
-ReactDOM.render(<MainPage />, document.getElementById("root"));

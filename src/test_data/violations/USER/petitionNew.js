@@ -1,7 +1,21 @@
-import React, { useState } from "react";
-import "./newpetition.css";
+/*
+import React from "react";
 
-const NewPetitionForm = ({ onSubmit }) => {
+const PetitionNew = () => {
+  return (
+    <div className="container">
+      <h1>이것은..violationNew</h1>
+      <h1>사용자 전용 - 위반내역 조회 - 이의신청 폼</h1>
+    </div>
+  );
+};
+
+export default PetitionNew;
+*/
+import React, { useState } from "react";
+import "./petitionNew.css";
+
+const PetitionNew = ({ onSubmit }) => {
   const [title, setTitle] = useState("");
   const [userName, setUserName] = useState("");
   const [carNumber, setCarNumber] = useState("");
@@ -83,4 +97,4 @@ const NewPetitionForm = ({ onSubmit }) => {
   );
 };
 
-export default NewPetitionForm;
+export default PetitionNew;

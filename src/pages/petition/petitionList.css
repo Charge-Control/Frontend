@@ -2,7 +2,8 @@
 
 .petitionList {
   margin-top: 120px;
-  width: 800px; /*컨테이너 넓이*/
+  width: 832px; /* 수정된 부분: 컨테이너 넓이 */
+  margin-left: calc((100% - 970px) / 2); /* 수정된 부분: 가운데 정렬 계산 */
 }
 
 .petitionList div {
@@ -10,47 +11,44 @@
   text-align: center; /* 내용 가운데 정렬 */
 }
 
-.petitionList .tableContainer {
-  margin-left: 400px;
-}
-
-/*--------------이 부분 지금 없음--------------*/
-/* 검색 컨테이너 */
-.searchContainer {
-  width: 300px;
-  height: 40px;
-  margin-left: 100px;
+/*-----------------------------------------------------------검색부분*/
+.petition-search {
+  margin-left: 595px;
   display: flex;
-  margin-bottom: 100px;
-}
-
-/* 검색 드롭다운 */
-.searchDropdown {
-  height: 100%;
-  margin-right: 10px;
-}
-
-/* 검색 입력창 */
-.searchContainer input[type="text"] {
-  width: 210px;
-  height: 100%;
-  padding: 8px;
-  font-size: 16px;
+  align-items: center;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  flex: 1;
+  border-radius: 5px;
+  padding: 2px;
+  background-color: transparent;
+  width: 310px;
+  height: 34px;
 }
 
-/* 검색 버튼 */
-.searchContainer button {
-  height: 100%;
-  padding: 10px 16px;
-  background-color: #cccccc;
-  color: #fff;
+.petition-search input[type="text"],
+.petition-search select {
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  margin-left: 5px;
 }
+
+.petitionbutton {
+  margin-bottom: 17px;
+  display: inline-block;
+  width: 70px;
+}
+
+.petitionbutton button {
+  border: none; /* 테두리 없음 */
+  padding: 10px 20px; /* 버튼 내부 여백 */
+  cursor: pointer; /* 커서를 포인터로 변경하여 클릭 가능한 것처럼 보이도록 함 */
+}
+
+.petitionbutton button .FaSearch {
+  font-size: 22px; /* 아이콘 크기 조절 */
+}
+
+/*-----------------------------------------------------------검색부분*/
 
 .petitionList table tbody tr td:nth-child(2) a {
   text-decoration: none; /* 글 제목의 밑줄 제거 */
@@ -84,13 +82,18 @@
 
 /* Pagination 스타일 */
 .petitionList .paginationButtonContainer {
-  text-align: center; /* 페이지네이션 버튼을 가운데 정렬합니다. */
-  width: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* 가운데 정렬 */
+  /*background-color: #0e8e70; /* 활성화된 상태 배경색 */
 
-  margin-left: 700px;
+  margin-left: 95px;
 }
 
 .petitionList button {
+  margin-top: 60px;
+  margin-bottom: 60px;
+
   display: inline-block;
   padding: 8px 16px;
   background-color: #fff;
@@ -98,9 +101,6 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-left: 0.001px;
-  margin-top: 100px;
-  margin-bottom: 50px;
 }
 
 .petitionList .paginationContainer button.active {

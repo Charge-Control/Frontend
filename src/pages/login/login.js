@@ -1,39 +1,61 @@
 import React, { useState, useEffect } from "react";
-import ErrorModal from "../../components/error/ErrorModal";
+import axios from "axios";
 import LoginForm from "../../components/loginForm/loginForm";
+import { API_BASE_URL } from "../../components/config";
+
 import "./login.css";
 
 const LoginPage = () => {
-  const [errorMessage, setErrorMessage] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // 로그인 상태를 저장하는 상태 변수
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    // 로그인 상태에 따라 페이지를 이동합니다.
-    if (isLoggedIn) {
-      window.location.href = "/main"; // 로그인이 되어 있으면 메인 페이지로 이동
-    }
-  }, [isLoggedIn]);
+    const accessToken = localStorage.getItem("accessToken");
+    const refreshToken = localStorage.getItem("refreshToken");
 
-  /*로그인 임시 구현*/
-  const handleLogin = (email, password) => {
-    if (email === "user@example.com" && password === "password") {
-      alert("사용자 계정으로 로그인 성공!");
-      console.log("폼이 성공적으로 제출되었습니다.");
-      setIsLoggedIn(true); // 로그인 상태를 true로 변경
-    } else if (email === "admin@example.com" && password === "adminpassword") {
-      alert("관리자 계정으로 로그인 성공!");
-      console.log("폼이 성공적으로 제출되었습니다.");
-      setIsLoggedIn(true); // 로그인 상태를 true로 변경
-    } else {
-      setErrorMessage("이메일 또는 비밀번호가 잘못되었습니다.");
-      console.log("폼이 제출되지 못함.");
+    if (accessToken && refreshToken) {
+      axios.defaults.headers.common["Authorization"] = `Bearer ${accessToken}`;
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogin = async (email, password) => {
+    try {
+      // API 연결
+      const response = await axios.post(`${API_BASE_URL}/api/v1/login`, {
+        email,
+        password,
+      });
+
+      const { accessToken, refreshToken } = response.data.data;
+
+      if (accessToken && refreshToken) {
+        // 토큰 저장
+        localStorage.setItem("accessToken", accessToken);
+        localStorage.setItem("refreshToken", refreshToken);
+        axios.defaults.headers.common[
+          "Authorization"
+        ] = `Bearer ${accessToken}`; //헤더
+        setIsLoggedIn(true);
+        console.log("로그인되었습니다.");
+        window.location.href = "/main"; // 로그인 후에 메인 페이지로 이동
+
+        // 사용자 정보 요청
+        const memberResponse = await axios.get(
+          `${API_BASE_URL}/api/v1/currentMember`,
+          {
+            headers: {
+              Authorization: `Bearer ${accessToken}`,
+            },
+          }
+        );
+      } else {
+        throw new Error("토큰이 반환되지 않았습니다.");
+      }
+    } catch (error) {
+      alert("이메일 또는 비밀번호가 잘못되었습니다.");
+      console.error("로그인 오류:", error);
     }
   };
-
-  const closeModal = () => {
-    setErrorMessage("");
-  };
-
   return (
     <div className="login-container">
       <div className="content">
@@ -43,9 +65,6 @@ const LoginPage = () => {
           <p>
             계정이 없으신가요? <a href="Join">회원가입</a>
           </p>
-          {errorMessage && (
-            <ErrorModal errorMessage={errorMessage} onClose={closeModal} />
-          )}
         </div>
       </div>
     </div>

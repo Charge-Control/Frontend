@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "latitude": 36.355,
+    "longitude": 127.345,
+    "name": "유성주유소",
+    "price": 430
+  },
+  {
+    "id": 2,
+    "latitude": 36.3561,
+    "longitude": 127.3462,
+    "name": "경원주유소",
+    "price": 430
+  },
+  {
+    "id": 3,
+    "latitude": 36.3572,
+    "longitude": 127.3473,
+    "name": "유신주유소",
+    "price": 430
+  },
+  {
+    "id": 4,
+    "latitude": 36.3583,
+    "longitude": 127.3484,
+    "name": "유성상사주유소",
+    "price": 430
+  },
+  {
+    "id": 5,
+    "latitude": 36.3594,
+    "longitude": 127.3495,
+    "name": "관평주유소",
+    "price": 420
+  },
+  {
+    "id": 6,
+    "latitude": 36.3605,
+    "longitude": 127.3506,
+    "name": "중앙주유소",
+    "price": 480
+  },
+  {
+    "id": 7,
+    "latitude": 36.3616,
+    "longitude": 127.3517,
+    "name": "대덕주유소",
+    "price": 480
+  },
+  {
+    "id": 8,
+    "latitude": 36.3627,
+    "longitude": 127.3528,
+    "name": "동서주유소",
+    "price": 470
+  },
+  {
+    "id": 9,
+    "latitude": 36.3638,
+    "longitude": 127.3539,
+    "name": "서울주유소",
+    "price": 440
+  },
+  {
+    "id": 10,
+    "latitude": 36.3649,
+    "longitude": 127.355,
+    "name": "한밭주유소",
+    "price": 430
+  }
+]

@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-  width: 1920px; /* 1280px * 1.5 */
+  width: 1936px;
   height: 63px; /* 42px * 1.5 */
   position: relative;
 }
@@ -68,8 +68,12 @@ body {
   display: flex;
 }
 
+.user-name {
+  margin-right: 10px; /* 사용자 이름과 슬래시 사이 여백 */
+}
+
 .action {
-  margin-right: 15px; /* 10px * 1.5 */
+  margin-right: 10px; /* 10px * 1.5 */
   cursor: pointer;
   text-decoration: none; /* 밑줄 제거 */
   color: #fff; /* 텍스트 색상을 흰색으로 변경 */
@@ -77,8 +81,7 @@ body {
 
 /*지피티가 도와준 써-브 메뉴!*/
 /* 서브 메뉴 바 */
-.sub-menu1,
-.sub-menu2 {
+.sub-menu1 {
   /* 절대 위치 설정 */
   position: absolute;
   /* 너비와 높이를 100%로 설정하여 부모 요소와 동일한 크기로 설정 */
@@ -98,8 +101,7 @@ body {
 }
 
 /* 각 메뉴 항목 스타일 */
-.sub-menu1 a,
-.sub-menu2 a {
+.sub-menu1 a {
   /* 블록 요소로 설정하여 한 줄에 하나의 항목이 표시되도록 함 */
   display: block;
   /* 폰트 패밀리 및 굵기, 크기, 줄 높이 설정 */
@@ -118,8 +120,7 @@ body {
 }
 
 /* 링크에 마우스를 올렸을 때 색상 및 글꼴 두껍게 설정 */
-.sub-menu1 a:hover,
-.sub-menu2 a:hover {
+.sub-menu1 a:hover {
   color: #626262; /* 링크에 마우스를 올렸을 때 텍스트 색상을 검정색으로 변경 */
   font-weight: bold; /* 링크에 마우스를 올렸을 때 글꼴을 두껍게 설정 */
 }
@@ -130,4 +131,12 @@ body {
   width: 6px;
   height: 6px;
   opacity: 0.4;
+}
+
+.sub-menu1 .sub-name1 {
+  margin-left: 1000px;
+}
+
+.sub-menu1 .sub-name2 {
+  margin-left: 30px;
 }

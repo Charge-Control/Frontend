@@ -1,0 +1,79 @@
+/* 위반 상세 정보 컨테이너 */
+.violationDetail {
+  margin-top: 10px;
+  /*margin-left: 544px;*/
+  padding: 20px;
+  width: 832px;
+  height: 550px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* 부모 컨테이너를 기준으로 자식 요소를 배치하기 위해 위치 지정 */
+}
+
+.violationDetail-title {
+  margin-top: 170px;
+  margin-left: 544px;
+  font-size: 20px;
+}
+
+/* 차량번호 스타일 */
+.violationDetail h3 {
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: 24px;
+  margin-bottom: -2px;
+}
+
+/* 이외 상세 정보 스타일 */
+.violationDetail p {
+  margin-left: 10px;
+  font-size: 18px;
+  margin-bottom: -4px;
+}
+
+/* 이미지 컨테이너 스타일 */
+.violationDetail .violationImageContainer {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* 위반 이미지 스타일 */
+.violationDetail .violationImageContainer {
+  position: absolute; /* 부모 컨테이너를 기준으로 위치 지정 */
+  top: 20px; /* 부모 컨테이너 상단으로부터의 거리 */
+  margin-left: 490px;
+}
+
+/* 위반 이미지 스타일 */
+.violationDetail .violationImage {
+  /*border: 2px solid #ccc; /* 테두리 추가 */
+  max-width: 300px;
+  height: auto;
+  /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);*/
+}
+
+/* 이의신청 버튼 컨테이너 스타일 */
+.violationDetail .appealButtonContainer {
+  margin-left: 685px;
+  margin-top: 260px;
+}
+
+/* 이의신청 버튼 스타일 */
+.violationDetail .appealButton {
+  margin-top: 20px;
+
+  padding: 10px 20px;
+  background-color: #1f1f1f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* 이의신청 버튼 호버 스타일 */
+.violationDetail .appealButton:hover {
+  background-color: #5f5f5f;
+}

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { FaSearch } from "react-icons/fa"; //검색 아이콘
+
 import "./faq.css";
 
 const FaqPage = () => {
@@ -77,7 +79,9 @@ const FaqPage = () => {
           value={searchTerm}
           onChange={handleSearchChange}
         />
-        <button onClick={handleSearch}>검색</button>
+        <button onClick={handleSearch}>
+          <FaSearch />
+        </button>
       </div>
       <div className="faq-set">
         {currentFaqs.map((item) => (

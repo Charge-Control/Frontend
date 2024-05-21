@@ -3,32 +3,24 @@ body {
 }
 
 .container {
-  width: 100%;
-  height: 100%;
+  width: 1936px;
+  height: 1096px;
   position: relative;
 }
 
 .mainImage {
-  /*
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../../images/test_image.jpg");
-  background-size: cover;
-  z-index: -1;*/
-
-  height: 100vh;
+  /*height: 100vh;*/
+  width: 1936px;
+  height: 1096px;
 
   background: url(../../images/main_image.jpg) no-repeat center;
   background-size: cover;
 }
 
-.title-dark,
-.title-light,
-.subtitle-dark,
-.subtitle-light {
+.main-title-dark,
+.main-title-light,
+.main-subtitle-dark,
+.main-subtitle-light {
   width: 731px;
   position: absolute;
   font-family: Poppins;
@@ -36,7 +28,7 @@ body {
 }
 
 /*제목*/
-.title-light {
+.main-title-light {
   height: 78px;
   left: 90px;
   top: 280px;
@@ -46,7 +38,7 @@ body {
 }
 
 /*제목 그림자*/
-.title-dark {
+.main-title-dark {
   height: 78px;
   left: 90px;
   top: 280px;
@@ -62,7 +54,7 @@ body {
 }
 
 /* 설명*/
-.subtitle-light {
+.main-subtitle-light {
   height: 171px;
   left: 90px;
   top: 400px;
@@ -72,7 +64,7 @@ body {
 }
 
 /* 설명 그림자*/
-.subtitle-dark {
+.main-subtitle-dark {
   height: 171px;
   left: 90px;
   top: 400px;

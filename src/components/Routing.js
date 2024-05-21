@@ -1,22 +1,24 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "../App";
+import LoginPage from "../pages/login/login";
+import JoinPage from "../pages/join/join";
 import MainPage from "../pages/main/main";
 import IntroPage from "../pages/intro/intro";
 import MapPage from "../pages/map/evmap";
+import FaqPage from "../pages/faq/faq";
 
-import LoginPage from "../pages/login/login";
-import JoinPage from "../pages/join/join";
-
+//위반내역 조회
 import ViolationList from "../pages/violation/violationList";
 import ViolationDetail from "../pages/violation/violationDetail";
+import PetitionNew from "../pages/violation/petitionNew";
+import PetitionEdit from "../pages/petition/petitionEdit";
+
+//이의신청 조회
 
 import PetitionList from "../pages/petition/petitionList";
 import PetitionDetail from "../pages/petition/petitionDetail";
-
-import NewPetitionForm from "../pages/petition/newPetitionForm";
-
-import FaqPage from "../pages/faq/faq";
+import PetitionAnswer from "../pages/petition/petitionAnswer";
 
 function Routing() {
   return (
@@ -29,19 +31,17 @@ function Routing() {
           <Route path="/join" element={<JoinPage />} />
           <Route path="/intro" element={<IntroPage />} />
           <Route path="/evmap" element={<MapPage />} />
-
-          <Route path="/view-all-violations" element={<ViolationList />} />
-          <Route
-            path="/violation-detail/:index"
-            element={<ViolationDetail />}
-          />
-
-          <Route path="/view-all-petitions" element={<PetitionList />} />
-          <Route path="/petition-detail/:id" element={<PetitionDetail />} />
-
-          <Route path="/newpetition" element={<NewPetitionForm />} />
-
           <Route path="/faq" element={<FaqPage />} />
+
+          <Route path="/violations" element={<ViolationList />} />
+          <Route path="/violation-detail/:id" element={<ViolationDetail />} />
+
+          <Route path="/petition-new" element={<PetitionNew />} />
+          <Route path="/petition-edit/:id" element={<PetitionEdit />} />
+
+          <Route path="/petitions" element={<PetitionList />} />
+          <Route path="/petition-answer/:id" element={<PetitionAnswer />} />
+          <Route path="/petition-detail/:id" element={<PetitionDetail />} />
         </Routes>
       </BrowserRouter>
     </div>
